@@ -5,6 +5,8 @@ class Team < ApplicationRecord
 
   # 🚅 add belongs_to associations above.
 
+  has_many :projects, dependent: :destroy
+  has_many :projects_tags, class_name: "Projects::Tag", dependent: :destroy
   # 🚅 add has_many associations above.
 
   # 🚅 add oauth providers above.
